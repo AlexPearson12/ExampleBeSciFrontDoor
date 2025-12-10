@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Support | Behavioural Science</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">Behavioural Science</div>
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="decision-tree.html" class="active">Request Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="decision-tree-intro">
+            <h1>Find the Right Support</h1>
+            <p class="lead">Click below and we'll ask three questions to help establish what's best for your needs.</p>
+        </section>
+
+        <section class="decision-tree-form">
+            <form id="decisionForm">
+                <!-- Question 1 -->
+                <div class="question-card active" id="q1">
+                    <div class="question-number">Question 1 of 3</div>
+                    <h2>Do you have materials, a service, or an intervention already created?</h2>
+                    <div class="options">
+                        <label class="option-card">
+                            <input type="radio" name="q1" value="yes">
+                            <span class="option-content">
+                                <span class="option-text">Yes</span>
+                                <span class="option-description">I have something already created</span>
+                            </span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="q1" value="no">
+                            <span class="option-content">
+                                <span class="option-text">No</span>
+                                <span class="option-description">I'm starting from scratch</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card" id="q2">
+                    <div class="question-number">Question 2 of 3</div>
+                    <h2>Do you need to measure whether it changes behaviour?</h2>
+                    <p class="question-hint">If this affects claimant outcomes, organizational resources, or could be scaled, the answer is yes.</p>
+                    <div class="options">
+                        <label class="option-card">
+                            <input type="radio" name="q2" value="yes">
+                            <span class="option-content">
+                                <span class="option-text">Yes</span>
+                                <span class="option-description">I need to measure impact</span>
+                            </span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="q2" value="no">
+                            <span class="option-content">
+                                <span class="option-text">No</span>
+                                <span class="option-description">Measurement isn't required</span>
+                            </span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn-secondary" onclick="goBack(1)">← Back</button>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card" id="q3">
+                    <div class="question-number">Question 3 of 3</div>
+                    <h2>Do you need an intervention designed and tested?</h2>
+                    <div class="options">
+                        <label class="option-card">
+                            <input type="radio" name="q3" value="yes">
+                            <span class="option-content">
+                                <span class="option-text">Yes</span>
+                                <span class="option-description">I need a full intervention</span>
+                            </span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="q3" value="no">
+                            <span class="option-content">
+                                <span class="option-text">No</span>
+                                <span class="option-description">Just exploring ideas</span>
+                            </span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn-secondary" onclick="goBack(1)">← Back</button>
+                </div>
+
+                <!-- Result -->
+                <div class="question-card" id="result">
+                    <div class="result-icon">✓</div>
+                    <h2>We recommend:</h2>
+                    <div id="recommendation" class="recommendation"></div>
+                    <div class="result-actions">
+                        <a href="#" id="resultLink" class="btn-primary">View Details</a>
+                        <button type="button" class="btn-secondary" onclick="resetForm()">Start Over</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Maximus. Behavioural Science Team.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
