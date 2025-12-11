@@ -7,4 +7,4 @@ This site is published via GitHub Pages at:
 
 ## About
 
-A behavioural science website for Maximus, featuring information about applied behavioural science and support request tools.
+A behavioural science website featuring information about applied behavioural science and support request tools.
