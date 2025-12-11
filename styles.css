@@ -1522,3 +1522,20 @@ body.page-transitioning {
         right: 1rem;
     }
 }
+
+/* Fix for blog card link underlines */
+.blog-card,
+.blog-card:hover,
+.blog-card:focus {
+    text-decoration: none !important;
+}
+
+.blog-card * {
+    text-decoration: none;
+}
+
+/* Ensure blog cards don't inherit nav link styles */
+.blog-card::before,
+.blog-card::after {
+    content: none !important;
+}
